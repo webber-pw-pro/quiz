@@ -77,7 +77,10 @@ hr {
   width: 142px;
   height: 42px;
 
-  @include font (1.5rem, 700, $white);
+  border-radius: 100px;
+  border: none;
+
+  @include font (1.5rem, 400, $white);
   text-transform: uppercase;
 
   &:hover {
@@ -208,7 +211,9 @@ hr {
   }*/
 
   #close {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 30px;
     height: 30px;
     border: 0;
@@ -218,6 +223,7 @@ hr {
     position: absolute;
     top: 20px;
     right: 20px;
+    z-index: 100;
 
     text-align: center;
   }
@@ -225,12 +231,11 @@ hr {
   .span__close {
       display: block;
       width: 20px;
-      height: 1px;
+      height: 3px;
       background-color: #fff;
       border: 0;
 
       position: absolute;
-      left: 5px;
     }
 
   .span_close_first {
@@ -273,7 +278,9 @@ hr {
   }
 
   .radio_card_checked {
-    visibility: hidden;
+    /*visibility: hidden;*/
+    transition: .3s ease-in-out;
+    opacity: 0;
     position: absolute;
     top: 10px;
     right: 15px;
@@ -299,7 +306,8 @@ hr {
   }
 
   .input__radio_card:checked + .radio_card_checked {
-      visibility: visible;
+      /*visibility: visible;*/
+      opacity: 1;
     }
 
   .label__checkbox, .label__radio {
@@ -325,8 +333,33 @@ hr {
     display: none;
 
     &:checked + .checkbox_checked {
-      background: url('../img/checked.png');
+      background: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
 
+      &::before, &::after {
+        content: '';
+        display: block;
+        position: relative;
+        background: #fff;
+        height: 4px;
+      }
+
+      &::before {
+        transform: rotate(30deg);
+        width: 12px;
+        left: 4px;
+        top: 4px;
+      }
+
+      &::after {
+        transform: rotate(-60deg);
+        width: 20px;
+        right: 3px;
+        top: 0px;
+      }
     }
   }
 
@@ -379,8 +412,24 @@ hr {
     -ms-appearance: none;
     appearance: none;
 
-    background-image: url('../img/arrow.png');
-    background-repeat: no-repeat;
-    background-position: 95% 50%;
-    background-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &::before, &::after {
+        content: '';
+        display: block;
+        position: relative;
+        background: #000;
+        height: 2px;
+        width: 20px;
+      }
+
+      &::before {
+        transform: rotate(45deg);
+      }
+
+      &::after {
+        transform: rotate(-45deg);
+      }
   }
