@@ -225,7 +225,9 @@ export default {
             item.answer = item.answer.join(", ")
           }
 
-          this.custom.result.push(item.question + ': ' + item.answer)
+          if (item.answer.length) {
+            this.custom.result.push(item.question + ': ' + item.answer)
+          }
 
         }
       })
