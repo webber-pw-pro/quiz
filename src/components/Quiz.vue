@@ -194,7 +194,7 @@ export default {
           { heading: 'Quiz', description: '', hint: '', question: null, answer: null },
           { heading: 'Choose your card', description: 'Finish that quiz and get bonus for the next buy', hint: '', question: 'Card', answer: null },
           { heading: 'Choose your checkbox', description: 'Finish that quiz and get bonus for the next buy', hint: 'choose one or more', question: 'Checkbox', answer: [] },
-          { heading: 'Choose your radio', description: 'Finish that quiz and get bonus for the next buy', hint: 'choose one or more', question: 'Radio', answer: null },
+          { heading: 'Choose your radio', description: 'Finish that quiz and get bonus for the next buy', hint: 'choose one', question: 'Radio', answer: null },
           { heading: 'Select your option', description: 'Finish that quiz and get bonus for the next buy', hint: '', question: 'Option', answer: 'IT' },
           { heading: 'Input your phone', description: 'Finish that quiz and get bonus for the next buy', hint: '', question: 'Phone', answer: null },
           { heading: 'Quiz', description: 'The most simple way to sell a lot.', hint: '', question: 'Email', answer: null }
