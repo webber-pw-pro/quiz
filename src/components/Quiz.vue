@@ -219,8 +219,14 @@ export default {
 
       this.quiz.map((item, index) => {
         if (index !== 0) {
-          console.log(item.question + ': ' + item.answer)
+          // console.log(item.question + ': ' + item.answer)
+
+          if (typeof item.answer === 'object') {
+            item.answer = item.answer.join(", ")
+          }
+
           this.custom.result.push(item.question + ': ' + item.answer)
+
         }
       })
     }
